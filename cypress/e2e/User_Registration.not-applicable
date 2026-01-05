@@ -1,0 +1,5 @@
+#@not-applicable
+#Scenario: User Registration
+  # Swag Labs does not support user registration.
+  # No signup page, no API, and no backend logic exist for creating new accounts.
+  # This scenario cannot be implemented in automation or manual testing.
