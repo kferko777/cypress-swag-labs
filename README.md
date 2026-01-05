@@ -6,15 +6,15 @@ Install project dependencies with: npm install
 
 ## 💻 Pre-requisites
 
-1. Node JS 18+
+1. Node JS 24+
 2. VsCode should be installed
 3. Git and Git bash should be installed
 4. Github account should be created
-5. Cypress version 12.14.0
+5. Cypress version 15.8.1
 
 ## Cucumber setup:
 
--Add cypress/config.ts
+-Add cypress/config.js
 -Add support for feature files to your Cypress configuration
 -Add cosmiconfig in package.json
 
@@ -40,3 +40,5 @@ Install project dependencies with: npm install
 
 -npx cypress open
 -then run single test you want
+
+## Add any other dependecy you want to the latest version
