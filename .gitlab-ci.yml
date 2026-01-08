@@ -1,0 +1,41 @@
+stages:
+  - test
+  - report
+
+variables:
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+  NODE_ENV: test
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - cache/Cypress
+
+cypress_tests:
+  stage: test
+  image: cypress/included:15.8.1
+  script:
+    - npm ci
+    - npm run ui-regression-headless-allure-electron
+  artifacts:
+    when: always
+    paths:
+      - allure-results
+      - cypress/videos
+      - cypress/screenshots
+    expire_in: 7 days
+
+allure_report:
+  stage: report
+  image: node:18
+  needs:
+    - cypress_tests
+  script:
+    - npm ci
+    - npm run allure:report
+  artifacts:
+    when: always
+    paths:
+      - allure-report
+    expire_in: 7 days
