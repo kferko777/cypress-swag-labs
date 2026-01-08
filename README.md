@@ -11,7 +11,7 @@
 ## Run All Tests
 ## Run a Single Test
 ## Add Additional Dependencies
-## CI/CD Integration   ← NEW SECTION GOES HERE
+## CI/CD Integration  
 ## Folder Structure
 ## How to Navigate This Project
 
