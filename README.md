@@ -1,6 +1,5 @@
 #Cypress + Cucumber + Allure Automation Framework (Swag Labs)
 # Project Title
-# Badges
 # Short Description
 ## Key Features
 ## Project Overview
