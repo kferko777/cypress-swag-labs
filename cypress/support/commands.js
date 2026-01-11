@@ -9,10 +9,12 @@ import { Login_PO } from './page_objects/Login_PO'
 const login_PO = new Login_PO()
 
 Cypress.Commands.add('loginData', (username, password) => {
-	login_PO.visit()
-	login_PO.type_Username(username)
-	login_PO.type_Password(password)
-	login_PO.click_LoginButton()
+  cy.session([username, password], () => {
+    cy.visit(Cypress.env('url'))
+    cy.get('#user-name').type(username)
+    cy.get('#password').type(password)
+    cy.get('#login-button').click()
+  })
 })
 
 Cypress.Commands.add('isVisible', selector => {

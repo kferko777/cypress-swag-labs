@@ -1,7 +1,11 @@
-import { When, Then } from '@badeball/cypress-cucumber-preprocessor';
+import {Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import { A_Product_Discovery_Search_Filter_PO } from '../page_objects/A_Product_Discovery_Search_Filter_PO';
 
 const product_PO = new A_Product_Discovery_Search_Filter_PO();
+Given('I am on the inventory page', () => {
+  cy.url().should('include', 'inventory.html')
+})
+
 
 When('I apply filter {string}', (option: string) => {
   product_PO.applyFilter(option);

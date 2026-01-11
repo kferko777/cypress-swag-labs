@@ -1,7 +1,8 @@
 Feature: Path A: Product Discovery — Search and Filter
 
   Background:
-    Given I am logged in
+    #Given I am logged in
+    And I am on the inventory page
 
   Scenario: Filter by Name A to Z
     When I apply filter "Name (A to Z)"
@@ -18,5 +19,4 @@ Feature: Path A: Product Discovery — Search and Filter
   Scenario: Filter by Price High to Low
     When I apply filter "Price (high to low)"
     Then products should be sorted by descending price
-
 
