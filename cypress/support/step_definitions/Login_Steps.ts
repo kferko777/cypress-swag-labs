@@ -16,7 +16,7 @@ When('I login with valid credentials', () => {
 })
 
 Given('I click on Sign in button', () => {
-  login_PO.clickOn_SignIn_Button()
+  login_PO.click_LoginButton()
 })
 
 Then('I should be able to login successfully to the Website', () => {

@@ -1,7 +1,7 @@
 Feature: Path A: Product Discovery — Search and Filter
 
   Background:
-    #Given I am logged in
+    Given I am logged in
     And I am on the inventory page
 
   Scenario: Filter by Name A to Z
