@@ -3,6 +3,19 @@ import { Checkout_PO } from '../page_objects/Checkout_PO';
 
 const checkout_PO = new Checkout_PO();
 
+// NEW independent steps
+When('I add a product to the cart for checkout', () => {
+  cy.contains('.inventory_item_name', 'Sauce Labs Backpack')
+    .parents('.inventory_item')
+    .find('button[data-test^="add-to-cart"]')
+    .click();
+});
+
+When('I open the cart for checkout', () => {
+  cy.get('.shopping_cart_link').click();
+});
+
+// Existing steps
 When('I click on checkout', () => {
   checkout_PO.clickCheckout();
 });

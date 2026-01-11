@@ -1,4 +1,6 @@
 #Cypress + Cucumber + Allure Automation Framework (Swag Labs)
+![CI Status](https://img.shields.io/...etc)
+
 # Project Title
 # Short Description
 ## Key Features
@@ -88,7 +90,10 @@ Install project dependencies with: npm install
 Install any new dependency using:
 npm install <package-name> --save-dev
 
-CYPRESS-SWAGLABS/
+
+▶️ CI
+This section explains how the project integrates with CI/CD to run Cypress tests automatically and generate Allure reports on every commit.
+
 CYPRESS-SWAGLABS/
 │
 ├── 📂 .vscode/

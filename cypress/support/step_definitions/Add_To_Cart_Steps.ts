@@ -15,18 +15,10 @@ Then('I should see the product name {string}', (name: string) => {
   cart_PO.getCartItemName().should('have.text', name);
 });
 
-Then('I should see the quantity {string}', (qty: string) => {
-  cart_PO.getCartItemQuantity().should('have.text', qty);
-});
-
-Then("I should see the cart product price {string}", function (price: string) {
+Then('I should see the cart product price {string}', (price: string) => {
   cart_PO.getCartItemPrice().should('have.text', price);
 });
 
-When('I remove the product {string} from the cart', (name: string) => {
-  cart_PO.removeProductFromCart(name);
- });
-
- Then('the cart should be empty', () => {
-   cart_PO.cartShouldBeEmpty(); 
-  });
+Then('I should see the quantity {string}', (qty: string) => {
+  cart_PO.getCartItemQuantity().should('have.text', qty);
+});

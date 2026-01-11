@@ -1,44 +1,42 @@
 /// <reference types="cypress" />
 import {
-	When,
-	Then,
-	Given,
-	Before,
-	After,
+  When,
+  Then,
+  Given,
+  Before,
+  After,
 } from '@badeball/cypress-cucumber-preprocessor'
 import { Base_PO } from '../page_objects/Base_PO'
 
 const base_PO = new Base_PO()
 
+// Runs before every scenario
 Before(() => {
-	cy.log('Executes before each Scenario/Test.')
-	cy.clearLocalStorage()
-	cy.clearCookies()
+  cy.log('Executes before each Scenario/Test.')
+  // Do NOT clear cookies or local storage here
 })
 
+// Optional: regression tag hook
 Before({ tags: '@regression' }, () => {
-	cy.log('Executes Smoke Pack')
+  cy.log('Executes Smoke Pack')
 })
 
-After(() => {
-	cy.log('Executes after each Scenario/Test.')
-})
-
+// Programmatic login for all features EXCEPT Login.feature
 Given('I am logged in', () => {
-	cy.fixture('loginData').then((data) => {
-		cy.loginData(data.username, data.password) // ✔ CORRECT
-	})
+  cy.fixture('loginData').then((data) => {
+    cy.loginData(data.username, data.password)
+  })
 })
 
 When('I wait for {int} seconds', (seconds: number) => {
-	cy.wait(seconds * 1000)
+  cy.wait(seconds * 1000)
 })
 
 When('I log out', () => {
-	base_PO.openBurgerMenu()
-	base_PO.logout()
+  base_PO.openBurgerMenu()
+  base_PO.logout()
 })
 
 Then('I should be redirected to login page', () => {
-	cy.url().should('eq', 'https://www.saucedemo.com/')
+  cy.url().should('eq', 'https://www.saucedemo.com/')
 })

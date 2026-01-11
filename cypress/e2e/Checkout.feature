@@ -3,12 +3,14 @@
   # Swag Labs does not support coupons or promo codes.
   # No UI element or backend logic exists for this feature
 
+  Feature: Path: Checkout Process
+
   Background:
     Given I am logged in
 
   Scenario: Complete checkout and verify order summary
-    When I add the product "Sauce Labs Backpack" to the cart
-    And I open the cart
+    When I add a product to the cart for checkout
+    And I open the cart for checkout
     And I click on checkout
     And I enter checkout information "QA" "Tester" "12345"
     And I continue to the summary page
@@ -19,4 +21,5 @@
     Then I should see the order confirmation page
     When I go back to the products page
     Then I should be redirected to the inventory page
+
 
