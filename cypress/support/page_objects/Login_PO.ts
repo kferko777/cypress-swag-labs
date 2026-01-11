@@ -3,11 +3,7 @@ export class Login_PO extends Base_PO {
 	
 
   visit() {
-    cy.visit(Cypress.env('url'))
-  }
-
-  clickOn_SignIn_Button() {
-    cy.get("input[name='login-button']").click({ force: true })
+    cy.visit('/')
   }
 
   type_Username(value: string) {

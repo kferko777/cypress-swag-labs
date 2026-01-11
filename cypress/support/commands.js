@@ -10,7 +10,7 @@ const login_PO = new Login_PO()
 
 Cypress.Commands.add('loginData', (username, password) => {
   cy.session([username, password], () => {
-    cy.visit(Cypress.env('url'))
+    cy.visit('/')
     cy.get('#user-name').type(username)
     cy.get('#password').type(password)
     cy.get('#login-button').click()
