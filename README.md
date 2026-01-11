@@ -209,3 +209,5 @@ Allure HTML reports are generated here.
 - `cypress.config.js` → Cypress settings  
 - `tsconfig.json` → TypeScript settings  
 - `.prettierrc` → formatting rules
+
+That is all
