@@ -1,5 +1,22 @@
-# 🚀 Cypress + Cucumber + Allure Automation Framework (Swag Labs)
-![CI Status](https://img.shields.io/...etc)
+# 🚀 **Cypress + Cucumber + Allure Automation Framework (Swag Labs)**
+---
+# 🏷️ **Project Title**
+# 📄 **Short Description**
+---
+## ⭐ **Key Features**
+## 📘 **Project Overview**
+## 📥 **Install the Project**
+## 💻 **Pre‑requisites**
+## 🥒 **Cucumber Setup**
+## 📊 **Reports Setup**
+## 🧪 **Allure Report**
+## ▶️ **Run All Tests**
+## 🧩 **Run a Single Test**
+## 📦 **Add Additional Dependencies**
+## 🔄 **CI/CD Integration**
+## 📁 **Folder Structure**
+## 🧭 **How to Navigate This Project**
+---
 
 # 🏷️ Project Title
 Cypress + Cucumber + Allure Automation Framework (Swag Labs)
