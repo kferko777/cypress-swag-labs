@@ -28,10 +28,10 @@
     "stepDefinitions": "cypress/support/step_definitions/**/*.ts"
   },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
     "@shelex/cypress-allure-plugin": "^2.41.2",
-    "cypress": "^15.8.1",
+    "cypress": "^15.17.0",
     "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
     "cypress-fail-fast": "^7.1.1",
     "cypress-iframe": "^1.0.1",
@@ -39,8 +39,9 @@
     "cypress-multi-reporters": "^2.0.5",
     "cypress-real-events": "^1.15.0",
     "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.4",
     "multiple-cucumber-html-reporter": "^3.9.3",
     "ts-loader": "^9.5.4",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }
